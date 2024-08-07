@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "l5s8RPac0caS1PZOkcBS6qSsnyTFS59OQdOJguIvwYo=",
+  "Source": "BankingControlPanelAPI",
+  "BasePath": "_content/BankingControlPanelAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
