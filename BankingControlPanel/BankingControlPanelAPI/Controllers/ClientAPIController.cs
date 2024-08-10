@@ -63,5 +63,24 @@ namespace BankingControlPanelAPI.Controllers
                 return Common.GetExceptionResponse(ex);
             }
         }
+
+        [HttpGet("lastFilterParams")]
+        public async Task<IActionResult> GetLastFilterParams()
+        {
+            try
+            {
+                var userId = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
+
+                var lastFilterParams = _clientService.GetLastFilterParams(userId);
+
+                _response.Result = lastFilterParams;
+
+                return Ok(_response);
+            }
+            catch (Exception ex)
+            {
+                return Common.GetExceptionResponse(ex);
+            }
+        }
     }
 }

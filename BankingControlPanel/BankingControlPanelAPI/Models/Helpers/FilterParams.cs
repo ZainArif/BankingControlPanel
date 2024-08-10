@@ -1,7 +1,10 @@
-﻿namespace BankingControlPanelAPI.Models.Helpers
+﻿using System.Text.Json.Serialization;
+
+namespace BankingControlPanelAPI.Models.Helpers
 {
     public class FilterParams
     {
+        [JsonIgnore]
         public string UserId { get; set; }
         public string SearchParam {  get; set; }
         public string SortBy { get; set; }

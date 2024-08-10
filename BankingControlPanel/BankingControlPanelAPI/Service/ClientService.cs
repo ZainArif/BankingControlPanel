@@ -79,7 +79,7 @@ namespace BankingControlPanelAPI.Service
                 TotalValues = totalValues,
                 Page = page,
                 PageSize = pageSize,
-                TotalPages = totalPages,    
+                TotalPages = totalPages,
             };
         }
 
@@ -88,11 +88,18 @@ namespace BankingControlPanelAPI.Service
             var filterParams = _memoryCache.GetOrCreate(LastFilterParamsCacheKey, entry => new List<FilterParams>());
 
             if (filterParams.Count == 3)
-                filterParams.RemoveAt(0);   
+                filterParams.RemoveAt(0);
 
             filterParams.Add(filterParam);
 
             _memoryCache.Set(LastFilterParamsCacheKey, filterParams);
+        }
+
+        public IEnumerable<FilterParams> GetLastFilterParams(string userId)
+        {
+            var filterParams = _memoryCache.GetOrCreate(LastFilterParamsCacheKey, entry => new List<FilterParams>());
+
+            return filterParams.Where(fp => fp.UserId == userId).ToList();
         }
     }
 }
