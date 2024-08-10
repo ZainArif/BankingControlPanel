@@ -1,10 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using BankingControlPanelAPI.Util;
+using System.ComponentModel.DataAnnotations;
 
-namespace BankingControlPanelAPI.Models
+namespace BankingControlPanelAPI.Models.Dtos
 {
-    public class Client
+    public class ClientDto
     {
-        [Key]
         public int ClientId { get; set; }
 
         [Required]
@@ -20,21 +20,22 @@ namespace BankingControlPanelAPI.Models
         public string LastName { get; set; }
 
         [Required]
-        [MaxLength(11)]
+        [StringLength(11, MinimumLength = 11)]
         public string PersonalId { get; set; }
 
         public string? ProfilePhoto { get; set; }
 
         [Required]
         [MaxLength(50)]
+        [MobileNumber]
         public string MobileNumber { get; set; }
 
         [Required]
-        [MaxLength(20)]
+        [RegularExpression("^(Male|Female)$", ErrorMessage = "Sex must be either Male or Female.")]
         public string Sex { get; set; }
 
-        public Address? Address { get; set; }
+        public AddressDto? Address { get; set; }
 
-        public IEnumerable<Account> Accounts { get; set; } = new List<Account>();
+        public IEnumerable<AccountDto> Accounts { get; set; } = new List<AccountDto>();
     }
 }
