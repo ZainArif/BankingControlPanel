@@ -28,7 +28,7 @@ namespace BankingControlPanelAPI.Service
                 Email = registrationRequestDto.Email,
                 NormalizedEmail = registrationRequestDto.Email.ToUpper(),
                 Name = registrationRequestDto.Name,
-                PhoneNumber = registrationRequestDto.PhoneNumber,
+                PhoneNumber = registrationRequestDto.MobileNumber,
             };
 
             var userCreated = await _userManager.CreateAsync(user, registrationRequestDto.Password);

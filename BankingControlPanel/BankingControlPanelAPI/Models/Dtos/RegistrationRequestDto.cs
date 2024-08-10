@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using BankingControlPanelAPI.Util;
+using System.ComponentModel.DataAnnotations;
 
 namespace BankingControlPanelAPI.Models.Dtos
 {
@@ -8,10 +9,12 @@ namespace BankingControlPanelAPI.Models.Dtos
         public string Name { get; set; }
 
         [Required(AllowEmptyStrings = false)]
+        [EmailAddress]
         public string Email { get; set; }
 
         [Required(AllowEmptyStrings = false)]
-        public string PhoneNumber { get; set; }
+        [MobileNumber]
+        public string MobileNumber { get; set; }
 
         [Required(AllowEmptyStrings = false)]
         public string Password { get; set; }
