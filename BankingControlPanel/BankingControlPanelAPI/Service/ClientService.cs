@@ -6,6 +6,7 @@ using BankingControlPanelAPI.Models.Helpers;
 using BankingControlPanelAPI.Service.IService;
 using BankingControlPanelAPI.Util;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace BankingControlPanelAPI.Service
 {
@@ -13,11 +14,14 @@ namespace BankingControlPanelAPI.Service
     {
         private readonly AppDbContext _appDbContext;
         private readonly IMapper _mapper;
+        private readonly IMemoryCache _memoryCache;
+        private const string LastFilterParamsCacheKey = "LastFilterParams";
 
-        public ClientService(AppDbContext appDbContext, IMapper mapper)
+        public ClientService(AppDbContext appDbContext, IMapper mapper, IMemoryCache memoryCache)
         {
             _appDbContext = appDbContext;
             _mapper = mapper;
+            _memoryCache = memoryCache;
         }
 
         public async Task AddClient(ClientDto clientDto)
@@ -33,7 +37,7 @@ namespace BankingControlPanelAPI.Service
             await _appDbContext.SaveChangesAsync();
         }
 
-        public async Task<PaginatedResponse<ClientDto>> GetClients(string searchParam, string sortBy, int page, int pageSize)
+        public async Task<PaginatedResponse<ClientDto>> GetClients(string userId, string searchParam, string sortBy, int page, int pageSize)
         {
             IQueryable<Client> query = _appDbContext.Clients
                                                     .Include(c => c.Address)
@@ -60,6 +64,15 @@ namespace BankingControlPanelAPI.Service
 
             var clients = await query.Skip((page - 1) * pageSize).Take(pageSize).ToListAsync();
 
+            SaveLastFilterParams(new FilterParams()
+            {
+                UserId = userId,
+                SearchParam = searchParam,
+                SortBy = sortBy,
+                Page = page,
+                PageSize = pageSize
+            });
+
             return new PaginatedResponse<ClientDto>
             {
                 Values = _mapper.Map<IEnumerable<ClientDto>>(clients),
@@ -68,6 +81,18 @@ namespace BankingControlPanelAPI.Service
                 PageSize = pageSize,
                 TotalPages = totalPages,    
             };
+        }
+
+        private void SaveLastFilterParams(FilterParams filterParam)
+        {
+            var filterParams = _memoryCache.GetOrCreate(LastFilterParamsCacheKey, entry => new List<FilterParams>());
+
+            if (filterParams.Count == 3)
+                filterParams.RemoveAt(0);   
+
+            filterParams.Add(filterParam);
+
+            _memoryCache.Set(LastFilterParamsCacheKey, filterParams);
         }
     }
 }
