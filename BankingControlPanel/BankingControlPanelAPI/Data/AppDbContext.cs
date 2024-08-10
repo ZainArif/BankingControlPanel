@@ -11,6 +11,9 @@ namespace BankingControlPanelAPI.Data
         }
 
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+        public DbSet<Client> Clients { get; set; }  
+        public DbSet<Address> Addresses { get; set; }
+        public DbSet<Account> Accounts { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
