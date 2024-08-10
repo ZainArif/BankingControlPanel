@@ -1,7 +1,48 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\study\\web projects\\BankingControlPanel\\BankingControlPanel\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B510C159-DD19-42E0-A4F0-E7B0AC8B72D3}|BankingControlPanelAPI\\BankingControlPanelAPI.csproj|d:\\study\\web projects\\bankingcontrolpanel\\bankingcontrolpanel\\bankingcontrolpanelapi\\service\\clientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B510C159-DD19-42E0-A4F0-E7B0AC8B72D3}|BankingControlPanelAPI\\BankingControlPanelAPI.csproj|solutionrelative:bankingcontrolpanelapi\\service\\clientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B510C159-DD19-42E0-A4F0-E7B0AC8B72D3}|BankingControlPanelAPI\\BankingControlPanelAPI.csproj|d:\\study\\web projects\\bankingcontrolpanel\\bankingcontrolpanel\\bankingcontrolpanelapi\\controllers\\clientapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B510C159-DD19-42E0-A4F0-E7B0AC8B72D3}|BankingControlPanelAPI\\BankingControlPanelAPI.csproj|solutionrelative:bankingcontrolpanelapi\\controllers\\clientapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B510C159-DD19-42E0-A4F0-E7B0AC8B72D3}|BankingControlPanelAPI\\BankingControlPanelAPI.csproj|d:\\study\\web projects\\bankingcontrolpanel\\bankingcontrolpanel\\bankingcontrolpanelapi\\util\\mobilenumberattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B510C159-DD19-42E0-A4F0-E7B0AC8B72D3}|BankingControlPanelAPI\\BankingControlPanelAPI.csproj|solutionrelative:bankingcontrolpanelapi\\util\\mobilenumberattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B510C159-DD19-42E0-A4F0-E7B0AC8B72D3}|BankingControlPanelAPI\\BankingControlPanelAPI.csproj|d:\\study\\web projects\\bankingcontrolpanel\\bankingcontrolpanel\\bankingcontrolpanelapi\\controllers\\authapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B510C159-DD19-42E0-A4F0-E7B0AC8B72D3}|BankingControlPanelAPI\\BankingControlPanelAPI.csproj|solutionrelative:bankingcontrolpanelapi\\controllers\\authapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B510C159-DD19-42E0-A4F0-E7B0AC8B72D3}|BankingControlPanelAPI\\BankingControlPanelAPI.csproj|d:\\study\\web projects\\bankingcontrolpanel\\bankingcontrolpanel\\bankingcontrolpanelapi\\service\\iservice\\iclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B510C159-DD19-42E0-A4F0-E7B0AC8B72D3}|BankingControlPanelAPI\\BankingControlPanelAPI.csproj|solutionrelative:bankingcontrolpanelapi\\service\\iservice\\iclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B510C159-DD19-42E0-A4F0-E7B0AC8B72D3}|BankingControlPanelAPI\\BankingControlPanelAPI.csproj|d:\\study\\web projects\\bankingcontrolpanel\\bankingcontrolpanel\\bankingcontrolpanelapi\\models\\helpers\\filterparams.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B510C159-DD19-42E0-A4F0-E7B0AC8B72D3}|BankingControlPanelAPI\\BankingControlPanelAPI.csproj|solutionrelative:bankingcontrolpanelapi\\models\\helpers\\filterparams.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B510C159-DD19-42E0-A4F0-E7B0AC8B72D3}|BankingControlPanelAPI\\BankingControlPanelAPI.csproj|d:\\study\\web projects\\bankingcontrolpanel\\bankingcontrolpanel\\bankingcontrolpanelapi\\service\\jwttokengenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B510C159-DD19-42E0-A4F0-E7B0AC8B72D3}|BankingControlPanelAPI\\BankingControlPanelAPI.csproj|solutionrelative:bankingcontrolpanelapi\\service\\jwttokengenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B510C159-DD19-42E0-A4F0-E7B0AC8B72D3}|BankingControlPanelAPI\\BankingControlPanelAPI.csproj|d:\\study\\web projects\\bankingcontrolpanel\\bankingcontrolpanel\\bankingcontrolpanelapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B510C159-DD19-42E0-A4F0-E7B0AC8B72D3}|BankingControlPanelAPI\\BankingControlPanelAPI.csproj|solutionrelative:bankingcontrolpanelapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B510C159-DD19-42E0-A4F0-E7B0AC8B72D3}|BankingControlPanelAPI\\BankingControlPanelAPI.csproj|d:\\study\\web projects\\bankingcontrolpanel\\bankingcontrolpanel\\bankingcontrolpanelapi\\models\\helpers\\paginatedresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B510C159-DD19-42E0-A4F0-E7B0AC8B72D3}|BankingControlPanelAPI\\BankingControlPanelAPI.csproj|solutionrelative:bankingcontrolpanelapi\\models\\helpers\\paginatedresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B510C159-DD19-42E0-A4F0-E7B0AC8B72D3}|BankingControlPanelAPI\\BankingControlPanelAPI.csproj|d:\\study\\web projects\\bankingcontrolpanel\\bankingcontrolpanel\\bankingcontrolpanelapi\\models\\dtos\\addressdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B510C159-DD19-42E0-A4F0-E7B0AC8B72D3}|BankingControlPanelAPI\\BankingControlPanelAPI.csproj|solutionrelative:bankingcontrolpanelapi\\models\\dtos\\addressdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +50,141 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthAPIController.cs",
+              "DocumentMoniker": "D:\\study\\web projects\\BankingControlPanel\\BankingControlPanel\\BankingControlPanelAPI\\Controllers\\AuthAPIController.cs",
+              "RelativeDocumentMoniker": "BankingControlPanelAPI\\Controllers\\AuthAPIController.cs",
+              "ToolTip": "D:\\study\\web projects\\BankingControlPanel\\BankingControlPanel\\BankingControlPanelAPI\\Controllers\\AuthAPIController.cs",
+              "RelativeToolTip": "BankingControlPanelAPI\\Controllers\\AuthAPIController.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAWwC0AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-10T18:20:23.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ClientAPIController.cs",
+              "DocumentMoniker": "D:\\study\\web projects\\BankingControlPanel\\BankingControlPanel\\BankingControlPanelAPI\\Controllers\\ClientAPIController.cs",
+              "RelativeDocumentMoniker": "BankingControlPanelAPI\\Controllers\\ClientAPIController.cs",
+              "ToolTip": "D:\\study\\web projects\\BankingControlPanel\\BankingControlPanel\\BankingControlPanelAPI\\Controllers\\ClientAPIController.cs",
+              "RelativeToolTip": "BankingControlPanelAPI\\Controllers\\ClientAPIController.cs",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAMwDEAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-10T13:24:45.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MobileNumberAttribute.cs",
+              "DocumentMoniker": "D:\\study\\web projects\\BankingControlPanel\\BankingControlPanel\\BankingControlPanelAPI\\Util\\MobileNumberAttribute.cs",
+              "RelativeDocumentMoniker": "BankingControlPanelAPI\\Util\\MobileNumberAttribute.cs",
+              "ToolTip": "D:\\study\\web projects\\BankingControlPanel\\BankingControlPanel\\BankingControlPanelAPI\\Util\\MobileNumberAttribute.cs",
+              "RelativeToolTip": "BankingControlPanelAPI\\Util\\MobileNumberAttribute.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-10T16:38:18.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ClientService.cs",
+              "DocumentMoniker": "D:\\study\\web projects\\BankingControlPanel\\BankingControlPanel\\BankingControlPanelAPI\\Service\\ClientService.cs",
+              "RelativeDocumentMoniker": "BankingControlPanelAPI\\Service\\ClientService.cs",
+              "ToolTip": "D:\\study\\web projects\\BankingControlPanel\\BankingControlPanel\\BankingControlPanelAPI\\Service\\ClientService.cs",
+              "RelativeToolTip": "BankingControlPanelAPI\\Service\\ClientService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-10T13:12:55.96Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\study\\web projects\\BankingControlPanel\\BankingControlPanel\\BankingControlPanelAPI\\Program.cs",
+              "RelativeDocumentMoniker": "BankingControlPanelAPI\\Program.cs",
+              "ToolTip": "D:\\study\\web projects\\BankingControlPanel\\BankingControlPanel\\BankingControlPanelAPI\\Program.cs",
+              "RelativeToolTip": "BankingControlPanelAPI\\Program.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAAACAAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-10T13:26:06.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IClientService.cs",
+              "DocumentMoniker": "D:\\study\\web projects\\BankingControlPanel\\BankingControlPanel\\BankingControlPanelAPI\\Service\\IService\\IClientService.cs",
+              "RelativeDocumentMoniker": "BankingControlPanelAPI\\Service\\IService\\IClientService.cs",
+              "ToolTip": "D:\\study\\web projects\\BankingControlPanel\\BankingControlPanel\\BankingControlPanelAPI\\Service\\IService\\IClientService.cs",
+              "RelativeToolTip": "BankingControlPanelAPI\\Service\\IService\\IClientService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-10T13:10:30.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FilterParams.cs",
+              "DocumentMoniker": "D:\\study\\web projects\\BankingControlPanel\\BankingControlPanel\\BankingControlPanelAPI\\Models\\Helpers\\FilterParams.cs",
+              "RelativeDocumentMoniker": "BankingControlPanelAPI\\Models\\Helpers\\FilterParams.cs",
+              "ToolTip": "D:\\study\\web projects\\BankingControlPanel\\BankingControlPanel\\BankingControlPanelAPI\\Models\\Helpers\\FilterParams.cs",
+              "RelativeToolTip": "BankingControlPanelAPI\\Models\\Helpers\\FilterParams.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-10T16:14:42.066Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "JwtTokenGenerator.cs",
+              "DocumentMoniker": "D:\\study\\web projects\\BankingControlPanel\\BankingControlPanel\\BankingControlPanelAPI\\Service\\JwtTokenGenerator.cs",
+              "RelativeDocumentMoniker": "BankingControlPanelAPI\\Service\\JwtTokenGenerator.cs",
+              "ToolTip": "D:\\study\\web projects\\BankingControlPanel\\BankingControlPanel\\BankingControlPanelAPI\\Service\\JwtTokenGenerator.cs",
+              "RelativeToolTip": "BankingControlPanelAPI\\Service\\JwtTokenGenerator.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAiwB8AAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-10T16:35:54.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PaginatedResponse.cs",
+              "DocumentMoniker": "D:\\study\\web projects\\BankingControlPanel\\BankingControlPanel\\BankingControlPanelAPI\\Models\\Helpers\\PaginatedResponse.cs",
+              "RelativeDocumentMoniker": "BankingControlPanelAPI\\Models\\Helpers\\PaginatedResponse.cs",
+              "ToolTip": "D:\\study\\web projects\\BankingControlPanel\\BankingControlPanel\\BankingControlPanelAPI\\Models\\Helpers\\PaginatedResponse.cs",
+              "RelativeToolTip": "BankingControlPanelAPI\\Models\\Helpers\\PaginatedResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-10T14:38:49.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AddressDto.cs",
+              "DocumentMoniker": "D:\\study\\web projects\\BankingControlPanel\\BankingControlPanel\\BankingControlPanelAPI\\Models\\Dtos\\AddressDto.cs",
+              "RelativeDocumentMoniker": "BankingControlPanelAPI\\Models\\Dtos\\AddressDto.cs",
+              "ToolTip": "D:\\study\\web projects\\BankingControlPanel\\BankingControlPanel\\BankingControlPanelAPI\\Models\\Dtos\\AddressDto.cs",
+              "RelativeToolTip": "BankingControlPanelAPI\\Models\\Dtos\\AddressDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-10T14:01:14.526Z",
+              "EditorCaption": ""
             }
           ]
         }

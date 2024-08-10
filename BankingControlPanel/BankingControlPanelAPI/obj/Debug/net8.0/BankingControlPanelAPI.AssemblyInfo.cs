@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BankingControlPanelAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+916903339e424918868dfca63f04452e75529d99")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7131d767157c0d5928d192160a91c33da1193f3b")]
 [assembly: System.Reflection.AssemblyProductAttribute("BankingControlPanelAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BankingControlPanelAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
