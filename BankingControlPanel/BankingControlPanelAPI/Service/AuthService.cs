@@ -53,5 +53,31 @@ namespace BankingControlPanelAPI.Service
 
             return registrationResponseDto;
         }
+
+        public async Task<LoginResponseDto> Login(LoginRequestDto loginRequestDto)
+        {
+            var loginResponseDto = new LoginResponseDto();
+
+            var user = _userManager.Users.FirstOrDefault(u => u.UserName.ToLower() == loginRequestDto.UserName.ToLower());
+
+            var isValid = await _userManager.CheckPasswordAsync(user, loginRequestDto.Password);
+
+            if (user == null || isValid == false)
+            {
+                return loginResponseDto;
+            }
+
+            UserDto userDto = new()
+            {
+                Email = user.Email,
+                Id = user.Id,
+                Name = user.Name,
+                PhoneNumber = user.PhoneNumber
+            };
+
+            loginResponseDto.User = userDto;
+
+            return loginResponseDto;
+        }
     }
 }
