@@ -26,7 +26,7 @@ namespace BankingControlPanelAPI.Service
             var claimList = new List<Claim>
             {
                 new Claim(JwtRegisteredClaimNames.Email, applicationUser.Email),
-                new Claim(JwtRegisteredClaimNames.Sub, applicationUser.Id),
+                new Claim(JwtRegisteredClaimNames.Sub, applicationUser.Id), // Sub claim stands for "subject". It identifies the subject of the token
                 new Claim(JwtRegisteredClaimNames.Name, applicationUser.Name),
             };
 
