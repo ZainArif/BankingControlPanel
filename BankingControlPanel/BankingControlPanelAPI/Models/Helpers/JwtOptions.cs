@@ -1,4 +1,4 @@
-﻿namespace BankingControlPanelAPI.Models
+﻿namespace BankingControlPanelAPI.Models.Helpers
 {
     public class JwtOptions
     {
