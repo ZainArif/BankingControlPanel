@@ -9,11 +9,13 @@ namespace BankingControlPanelAPI.Service
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly IJwtTokenGenerator _jwtTokenGenerator;
 
-        public AuthService(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
+        public AuthService(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager, IJwtTokenGenerator jwtTokenGenerator)
         {
             _userManager = userManager;
-            _roleManager = roleManager; 
+            _roleManager = roleManager;
+            _jwtTokenGenerator = jwtTokenGenerator; 
         }
 
         public async Task<RegistrationResponseDto> Register(RegistrationRequestDto registrationRequestDto)
@@ -67,6 +69,9 @@ namespace BankingControlPanelAPI.Service
                 return loginResponseDto;
             }
 
+            var roles = await _userManager.GetRolesAsync(user);
+            var token = _jwtTokenGenerator.GenerateToken(user, roles);
+
             UserDto userDto = new()
             {
                 Email = user.Email,
@@ -76,6 +81,7 @@ namespace BankingControlPanelAPI.Service
             };
 
             loginResponseDto.User = userDto;
+            loginResponseDto.Token = token; 
 
             return loginResponseDto;
         }
