@@ -1,0 +1,707 @@
+{
+	"info": {
+		"_postman_id": "db036036-88e6-4fe1-bcac-101346078ba5",
+		"name": "Banking Control Panel APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6371662"
+	},
+	"item": [
+		{
+			"name": "Auth APIs",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Zeeshan\",\r\n  \"email\": \"zeeshan@gmail.com\",\r\n  \"mobileNumber\": \"+923217394105\",\r\n  \"password\": \"Admin@123\",\r\n  \"role\": \"Admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/api/auth/register",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Zeeshan\",\r\n  \"email\": \"zeeshan@gmail.com\",\r\n  \"mobileNumber\": \"+923217394105\",\r\n  \"password\": \"Admin@123\",\r\n  \"role\": \"Admin\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}/api/auth/register",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Aug 2024 19:10:23 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": null,\n    \"isSuccess\": true,\n    \"message\": \"User registered successfully.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userName\": \"zeeshan@gmail.com\",\r\n  \"password\": \"Admin@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/api/auth/login",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"userName\": \"zeeshan@gmail.com\",\r\n  \"password\": \"Admin@123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}/api/auth/login",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Aug 2024 19:12:33 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": {\n        \"user\": {\n            \"id\": \"ee995355-6e94-4080-bbb4-45442d189e3a\",\n            \"email\": \"zeeshan@gmail.com\",\n            \"name\": \"Zeeshan\",\n            \"phoneNumber\": \"+923217394105\"\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InplZXNoYW5AZ21haWwuY29tIiwic3ViIjoiZWU5OTUzNTUtNmU5NC00MDgwLWJiYjQtNDU0NDJkMTg5ZTNhIiwibmFtZSI6IlplZXNoYW4iLCJyb2xlIjoiQWRtaW4iLCJuYmYiOjE3MjMzMTcxNTQsImV4cCI6MTcyMzMxODA1MywiaWF0IjoxNzIzMzE3MTU0LCJpc3MiOiJiYW5raW5nLWNvbnRyb2wtcGFuZWwtYXBpIiwiYXVkIjoiYmFua2luZy1jb250cm9sLXBhbmVsLWNsaWVudCJ9.xKuOonJM_jauohqehBh0ANRl_xSL4TT71tKN9Kih_4w\"\n    },\n    \"isSuccess\": true,\n    \"message\": \"\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Client APIs",
+			"item": [
+				{
+					"name": "Add client",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InplZXNoYW5AZ21haWwuY29tIiwic3ViIjoiZWU5OTUzNTUtNmU5NC00MDgwLWJiYjQtNDU0NDJkMTg5ZTNhIiwibmFtZSI6IlplZXNoYW4iLCJyb2xlIjoiQWRtaW4iLCJuYmYiOjE3MjMzMTcxNTQsImV4cCI6MTcyMzMxODA1MywiaWF0IjoxNzIzMzE3MTU0LCJpc3MiOiJiYW5raW5nLWNvbnRyb2wtcGFuZWwtYXBpIiwiYXVkIjoiYmFua2luZy1jb250cm9sLXBhbmVsLWNsaWVudCJ9.xKuOonJM_jauohqehBh0ANRl_xSL4TT71tKN9Kih_4w",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"clientId\": 0,\r\n  \"email\": \"arif@gmail.com\",\r\n  \"firstName\": \"Arif\",\r\n  \"lastName\": \"Hasan\",\r\n  \"personalId\": \"78900000123\",\r\n  \"profilePhoto\": \"\",\r\n  \"mobileNumber\": \"+923157933451\",\r\n  \"sex\": \"Male\",\r\n  \"address\": {\r\n    \"country\": \"Pakistan\",\r\n    \"city\": \"Karachi\",\r\n    \"street\": \"North Nazimabad\",\r\n    \"zipCode\": \"74600\"\r\n  },\r\n  \"accounts\": [\r\n    {\r\n      \"accountNumber\": \"45600000923\",\r\n      \"balance\": 100\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/api/client",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"client"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add client",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InplZXNoYW5AZ21haWwuY29tIiwic3ViIjoiZWU5OTUzNTUtNmU5NC00MDgwLWJiYjQtNDU0NDJkMTg5ZTNhIiwibmFtZSI6IlplZXNoYW4iLCJyb2xlIjoiQWRtaW4iLCJuYmYiOjE3MjMzMTcxNTQsImV4cCI6MTcyMzMxODA1MywiaWF0IjoxNzIzMzE3MTU0LCJpc3MiOiJiYW5raW5nLWNvbnRyb2wtcGFuZWwtYXBpIiwiYXVkIjoiYmFua2luZy1jb250cm9sLXBhbmVsLWNsaWVudCJ9.xKuOonJM_jauohqehBh0ANRl_xSL4TT71tKN9Kih_4w",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"clientId\": 0,\r\n  \"email\": \"arif@gmail.com\",\r\n  \"firstName\": \"Arif\",\r\n  \"lastName\": \"Hasan\",\r\n  \"personalId\": \"78900000123\",\r\n  \"profilePhoto\": \"\",\r\n  \"mobileNumber\": \"+923157933451\",\r\n  \"sex\": \"Male\",\r\n  \"address\": {\r\n    \"country\": \"Pakistan\",\r\n    \"city\": \"Karachi\",\r\n    \"street\": \"North Nazimabad\",\r\n    \"zipCode\": \"74600\"\r\n  },\r\n  \"accounts\": [\r\n    {\r\n      \"accountNumber\": \"45600000923\",\r\n      \"balance\": 100\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}/api/client",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"api",
+										"client"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Aug 2024 19:17:50 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": null,\n    \"isSuccess\": true,\n    \"message\": \"Client added successfully.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get clients",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InplZXNoYW5AZ21haWwuY29tIiwic3ViIjoiZWU5OTUzNTUtNmU5NC00MDgwLWJiYjQtNDU0NDJkMTg5ZTNhIiwibmFtZSI6IlplZXNoYW4iLCJyb2xlIjoiQWRtaW4iLCJuYmYiOjE3MjMzMTcxNTQsImV4cCI6MTcyMzMxODA1MywiaWF0IjoxNzIzMzE3MTU0LCJpc3MiOiJiYW5raW5nLWNvbnRyb2wtcGFuZWwtYXBpIiwiYXVkIjoiYmFua2luZy1jb250cm9sLXBhbmVsLWNsaWVudCJ9.xKuOonJM_jauohqehBh0ANRl_xSL4TT71tKN9Kih_4w",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localhost}}/api/client",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"client"
+							],
+							"query": [
+								{
+									"key": "searchParam",
+									"value": "arif",
+									"disabled": true
+								},
+								{
+									"key": "sortBy",
+									"value": "FirstName",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "pageSize",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get clients",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InplZXNoYW5AZ21haWwuY29tIiwic3ViIjoiZWU5OTUzNTUtNmU5NC00MDgwLWJiYjQtNDU0NDJkMTg5ZTNhIiwibmFtZSI6IlplZXNoYW4iLCJyb2xlIjoiQWRtaW4iLCJuYmYiOjE3MjMzMTcxNTQsImV4cCI6MTcyMzMxODA1MywiaWF0IjoxNzIzMzE3MTU0LCJpc3MiOiJiYW5raW5nLWNvbnRyb2wtcGFuZWwtYXBpIiwiYXVkIjoiYmFua2luZy1jb250cm9sLXBhbmVsLWNsaWVudCJ9.xKuOonJM_jauohqehBh0ANRl_xSL4TT71tKN9Kih_4w",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}/api/client",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"api",
+										"client"
+									],
+									"query": [
+										{
+											"key": "searchParam",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "sortBy",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "pageSize",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Aug 2024 19:19:48 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": {\n        \"values\": [\n            {\n                \"clientId\": 3,\n                \"email\": \"ali@gmail.com\",\n                \"firstName\": \"Ali\",\n                \"lastName\": \"Khan\",\n                \"personalId\": \"12300000789\",\n                \"profilePhoto\": null,\n                \"mobileNumber\": \"+923150000099\",\n                \"sex\": \"Male\",\n                \"address\": null,\n                \"accounts\": [\n                    {\n                        \"accountNumber\": \"45600000321\",\n                        \"balance\": 100\n                    }\n                ]\n            },\n            {\n                \"clientId\": 4,\n                \"email\": \"sara@gmail.com\",\n                \"firstName\": \"Sara\",\n                \"lastName\": \"Khan\",\n                \"personalId\": \"12300001789\",\n                \"profilePhoto\": null,\n                \"mobileNumber\": \"+923330000199\",\n                \"sex\": \"Female\",\n                \"address\": {\n                    \"country\": \"Pakistan\",\n                    \"city\": \"Karachi\",\n                    \"street\": \"North Nazimabad\",\n                    \"zipCode\": \"74600\"\n                },\n                \"accounts\": [\n                    {\n                        \"accountNumber\": \"45600001321\",\n                        \"balance\": 100\n                    }\n                ]\n            },\n            {\n                \"clientId\": 5,\n                \"email\": \"arif@gmail.com\",\n                \"firstName\": \"Arif\",\n                \"lastName\": \"Hasan\",\n                \"personalId\": \"78900000123\",\n                \"profilePhoto\": \"\",\n                \"mobileNumber\": \"+923157933451\",\n                \"sex\": \"Male\",\n                \"address\": {\n                    \"country\": \"Pakistan\",\n                    \"city\": \"Karachi\",\n                    \"street\": \"North Nazimabad\",\n                    \"zipCode\": \"74600\"\n                },\n                \"accounts\": [\n                    {\n                        \"accountNumber\": \"45600000923\",\n                        \"balance\": 100\n                    }\n                ]\n            }\n        ],\n        \"totalValues\": 3,\n        \"page\": 1,\n        \"pageSize\": 10,\n        \"totalPages\": 1\n    },\n    \"isSuccess\": true,\n    \"message\": \"\"\n}"
+						},
+						{
+							"name": "Get clients",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InplZXNoYW5AZ21haWwuY29tIiwic3ViIjoiZWU5OTUzNTUtNmU5NC00MDgwLWJiYjQtNDU0NDJkMTg5ZTNhIiwibmFtZSI6IlplZXNoYW4iLCJyb2xlIjoiQWRtaW4iLCJuYmYiOjE3MjMzMTcxNTQsImV4cCI6MTcyMzMxODA1MywiaWF0IjoxNzIzMzE3MTU0LCJpc3MiOiJiYW5raW5nLWNvbnRyb2wtcGFuZWwtYXBpIiwiYXVkIjoiYmFua2luZy1jb250cm9sLXBhbmVsLWNsaWVudCJ9.xKuOonJM_jauohqehBh0ANRl_xSL4TT71tKN9Kih_4w",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}/api/client?searchParam=arif",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"api",
+										"client"
+									],
+									"query": [
+										{
+											"key": "searchParam",
+											"value": "arif"
+										},
+										{
+											"key": "sortBy",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "pageSize",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Aug 2024 19:20:50 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": {\n        \"values\": [\n            {\n                \"clientId\": 5,\n                \"email\": \"arif@gmail.com\",\n                \"firstName\": \"Arif\",\n                \"lastName\": \"Hasan\",\n                \"personalId\": \"78900000123\",\n                \"profilePhoto\": \"\",\n                \"mobileNumber\": \"+923157933451\",\n                \"sex\": \"Male\",\n                \"address\": {\n                    \"country\": \"Pakistan\",\n                    \"city\": \"Karachi\",\n                    \"street\": \"North Nazimabad\",\n                    \"zipCode\": \"74600\"\n                },\n                \"accounts\": [\n                    {\n                        \"accountNumber\": \"45600000923\",\n                        \"balance\": 100\n                    }\n                ]\n            }\n        ],\n        \"totalValues\": 1,\n        \"page\": 1,\n        \"pageSize\": 10,\n        \"totalPages\": 1\n    },\n    \"isSuccess\": true,\n    \"message\": \"\"\n}"
+						},
+						{
+							"name": "Get clients",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InplZXNoYW5AZ21haWwuY29tIiwic3ViIjoiZWU5OTUzNTUtNmU5NC00MDgwLWJiYjQtNDU0NDJkMTg5ZTNhIiwibmFtZSI6IlplZXNoYW4iLCJyb2xlIjoiQWRtaW4iLCJuYmYiOjE3MjMzMTcxNTQsImV4cCI6MTcyMzMxODA1MywiaWF0IjoxNzIzMzE3MTU0LCJpc3MiOiJiYW5raW5nLWNvbnRyb2wtcGFuZWwtYXBpIiwiYXVkIjoiYmFua2luZy1jb250cm9sLXBhbmVsLWNsaWVudCJ9.xKuOonJM_jauohqehBh0ANRl_xSL4TT71tKN9Kih_4w",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}/api/client?sortBy=FirstName&page=1&pageSize=2",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"api",
+										"client"
+									],
+									"query": [
+										{
+											"key": "searchParam",
+											"value": "arif",
+											"disabled": true
+										},
+										{
+											"key": "sortBy",
+											"value": "FirstName"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "pageSize",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Aug 2024 19:22:23 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": {\n        \"values\": [\n            {\n                \"clientId\": 3,\n                \"email\": \"ali@gmail.com\",\n                \"firstName\": \"Ali\",\n                \"lastName\": \"Khan\",\n                \"personalId\": \"12300000789\",\n                \"profilePhoto\": null,\n                \"mobileNumber\": \"+923150000099\",\n                \"sex\": \"Male\",\n                \"address\": null,\n                \"accounts\": [\n                    {\n                        \"accountNumber\": \"45600000321\",\n                        \"balance\": 100\n                    }\n                ]\n            },\n            {\n                \"clientId\": 5,\n                \"email\": \"arif@gmail.com\",\n                \"firstName\": \"Arif\",\n                \"lastName\": \"Hasan\",\n                \"personalId\": \"78900000123\",\n                \"profilePhoto\": \"\",\n                \"mobileNumber\": \"+923157933451\",\n                \"sex\": \"Male\",\n                \"address\": {\n                    \"country\": \"Pakistan\",\n                    \"city\": \"Karachi\",\n                    \"street\": \"North Nazimabad\",\n                    \"zipCode\": \"74600\"\n                },\n                \"accounts\": [\n                    {\n                        \"accountNumber\": \"45600000923\",\n                        \"balance\": 100\n                    }\n                ]\n            }\n        ],\n        \"totalValues\": 3,\n        \"page\": 1,\n        \"pageSize\": 2,\n        \"totalPages\": 2\n    },\n    \"isSuccess\": true,\n    \"message\": \"\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get last filter params",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InplZXNoYW5AZ21haWwuY29tIiwic3ViIjoiZWU5OTUzNTUtNmU5NC00MDgwLWJiYjQtNDU0NDJkMTg5ZTNhIiwibmFtZSI6IlplZXNoYW4iLCJyb2xlIjoiQWRtaW4iLCJuYmYiOjE3MjMzMTcxNTQsImV4cCI6MTcyMzMxODA1MywiaWF0IjoxNzIzMzE3MTU0LCJpc3MiOiJiYW5raW5nLWNvbnRyb2wtcGFuZWwtYXBpIiwiYXVkIjoiYmFua2luZy1jb250cm9sLXBhbmVsLWNsaWVudCJ9.xKuOonJM_jauohqehBh0ANRl_xSL4TT71tKN9Kih_4w",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localhost}}/api/client/lastFilterParams",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"client",
+								"lastFilterParams"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get last filter params",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InplZXNoYW5AZ21haWwuY29tIiwic3ViIjoiZWU5OTUzNTUtNmU5NC00MDgwLWJiYjQtNDU0NDJkMTg5ZTNhIiwibmFtZSI6IlplZXNoYW4iLCJyb2xlIjoiQWRtaW4iLCJuYmYiOjE3MjMzMTcxNTQsImV4cCI6MTcyMzMxODA1MywiaWF0IjoxNzIzMzE3MTU0LCJpc3MiOiJiYW5raW5nLWNvbnRyb2wtcGFuZWwtYXBpIiwiYXVkIjoiYmFua2luZy1jb250cm9sLXBhbmVsLWNsaWVudCJ9.xKuOonJM_jauohqehBh0ANRl_xSL4TT71tKN9Kih_4w",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{localhost}}/api/client/lastFilterParams",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"api",
+										"client",
+										"lastFilterParams"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Aug 2024 19:25:45 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": [\n        {\n            \"searchParam\": \"arif\",\n            \"sortBy\": null,\n            \"page\": 1,\n            \"pageSize\": 10\n        },\n        {\n            \"searchParam\": null,\n            \"sortBy\": null,\n            \"page\": 1,\n            \"pageSize\": 2\n        },\n        {\n            \"searchParam\": null,\n            \"sortBy\": \"FirstName\",\n            \"page\": 1,\n            \"pageSize\": 2\n        }\n    ],\n    \"isSuccess\": true,\n    \"message\": \"\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "localhost",
+			"value": "https://localhost:7071",
+			"type": "string"
+		}
+	]
+}
